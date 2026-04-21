@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Registro{% endblock %}
+{% block content %}
+<h1>Registro de usuario</h1>
+<form method="POST">
+    <label>Nombre completo:</label><br>
+    <input type="text" name="name" required><br><br>
+    
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+    
+    <label>Contraseña:</label><br>
+    <input type="password" name="password" required><br><br>
+    
+    <label>Color de tema (fondo):</label><br>
+    <select name="color">
+        <option value="#f0f0f0">Claro</option>
+        <option value="#c3e6cb">Verde</option>
+        <option value="#b8daff">Azul</option>
+        <option value="#f5c6cb">Rojo</option>
+    </select><br><br>
+    
+    <button type="submit">Registrarse</button>
+</form>
+<p>¿Ya tienes cuenta? <a href="{{ url_for('login') }}">Inicia sesión</a></p>
+{% endblock %}
